@@ -1,0 +1,19 @@
+package matriz;
+import java.util.Scanner;
+public class exer5 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int inv[][] = new int[3][4], qt[] = new int[4];
+		for (int i=0; i<4; i++) {
+			for (int j=0; j<3; j++) {
+				System.out.print("Digite a quantidade do produto "+(j+1)+" no "+(i+1)+"º armazem: ");
+				inv[j][i]=Integer.parseInt(sc.next());
+				qt[i]+=inv[j][i];
+			}
+		}
+		for (int i=0; i<3; i++) {
+			System.out.println((i+1)+"º produto: "+qt[i]);
+		}
+		sc.close();
+	}
+}

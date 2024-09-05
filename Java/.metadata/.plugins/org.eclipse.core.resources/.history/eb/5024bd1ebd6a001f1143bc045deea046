@@ -1,0 +1,15 @@
+package vetor;
+import java.util.Scanner;
+public class exer1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int notas[] = new int[5];
+		double media=0;
+		for (int i=0; i<5; i++) {
+			System.out.print("Digite a "+(i+1)+" nota: ");
+			notas[i] = Integer.parseInt(sc.next());
+			media=media+notas[i];
+		}
+		System.out.print("A média das notas foi: "+(media/5));
+	}
+}

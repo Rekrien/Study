@@ -1,0 +1,25 @@
+package vetor;
+import java.util.Scanner;
+public class exer3 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double temp[] = new double[7];
+		double maior=0, menor=0;
+		for(int i=0;i<7;i++) {
+			System.out.print("Digite a temperatura do"+(i+1)+" dia: ");
+			temp[i] = Double.parseDouble(sc.next());
+			if (i==0) {
+				maior=temp[i];
+				menor=temp[i];
+			}
+			else if(temp[i]>maior) {
+				maior=temp[i];
+			}
+			else if(temp[i]<menor) {
+				menor=temp[i];
+			}
+		}
+		System.out.println("Maior temperatura: "+maior);
+		System.out.println("Menor temperatura: "+menor);
+	}
+}
